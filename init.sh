@@ -7,7 +7,8 @@ function graceful_exit
       echo -e "Here is the error message: $1\n"
       exit 1
 }
-
+# Added to make sure that not run by accident
+exit
 echo HERE variables
 SC_SCRIPTNAME=$(readlink -f "$0")
 SC_SCRIPTPATH=$(dirname "$SC_SCRIPTNAME")
